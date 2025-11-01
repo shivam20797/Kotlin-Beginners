@@ -37,6 +37,19 @@ Kotlin runs on the **Java Virtual Machine (JVM)**, and can also target:
 
 ---
 
+## ✅ Advantages
+- Avoids NullPointerException
+- Acts as a safe default value
+- Useful for initializing variables before adding data
+- Ideal for optional parameters in functions
+- Simplifies handling when no data is available
+
+## ⚠️ Disadvantages
+- Fixed size (cannot add new elements directly)
+- Must recreate a new array if you want to append data
+- May use small memory overhead compared to null
+- Less flexible than mutable lists (mutableListOf())
+
 ## 📘 Kotlin in Android Development
 
 - Kotlin supports **Jetpack libraries** for building Android apps.
