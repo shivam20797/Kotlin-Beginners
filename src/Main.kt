@@ -1,6 +1,6 @@
 /**
  * Topic: String Concatenation in Kotlin
- * Author: Aakash
+ * Author: Shivam
  * Part of: Git Series for Kotlin Beginners
  *
  * Description:

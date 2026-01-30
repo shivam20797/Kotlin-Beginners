@@ -1,6 +1,6 @@
 /**
  * Topic: var, val, data types, and basic Kotlin syntax
- * Author: Aakash
+ * Author: Shivam
  * Part of: Git Series for Kotlin Beginners
  *
  * Description:
@@ -8,38 +8,46 @@
  * - Difference between `var` and `val`
  * - Type inference in Kotlin
  * - Basic data types (Int, Double, String)
- * - String interpolation (using $variable)
+ * - String interpolation
  * - Comparison with Java
  */
 
 
-fun main(args : Array<String>) {
+fun main() {
 
     // -------------------------------
     // 1️⃣ Variable Declaration
     // -------------------------------
-    // `var` = mutable variable (value can be changed)
-    var a = 14  // Kotlin automatically infers type as Int
-    var b = 78.9 // Kotlin infers type as Double
-    var name = "Dev"  // Type inferred as String
 
-    println(a)  // Output: 14
+    // `var` → mutable variable (value CAN be changed)
+    var a = 20  //  Type inferred as Int
+    var b = 16.2 // Type inferred as Double
+
+    // `val` → immutable variable (value CANNOT be changed)
+    val name = "Dev"  // Type inferred as String
+
+    println(a)
+    println(b)
+    println(name)
+
+    // a = "Dev" Error: Type mismatch (Int cannot hold String)
+
+    a = 80
+    println(a)
+
+    // name = "Ravi"  Error: val cannot be reassigned
 
     // -------------------------------
-    // 2️⃣ Increment Operations
+    // 2️⃣ Explicit Type Declaration
     // -------------------------------
 
-    a++ // post-increment: increases after this line
-    ++a // pre-increment: increases before usage
-    println(a++)  // prints current a, then increases it by 1
+    val e: Int = 10
 
     // -------------------------------
-    // 3️⃣ Immutable Variable
+    // 3️⃣ String Interpolation
     // -------------------------------
 
-    // `val` = read-only variable (cannot be reassigned)
 
-    val e : Int  = 10
     println("Value of a is $a")  // String interpolation
     println("Value of e is $e")
     println("Addition of $a and $b : ${a+b}")

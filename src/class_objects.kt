@@ -1,10 +1,11 @@
 /**
  * Topic: Classes and Objects in Kotlin
- * Author: Aakash
+ * Author: Shivam
  * Part of: Git Series for Kotlin Beginners
  *
  * Description:
- * This example demonstrates how to create and use classes and objects in Kotlin.
+ * This file explains how Classes, Objects, and Constructors work
+ * in Kotlin with simple and real-life examples.
  *
  * Key Concepts Covered:
  *  - Class: A blueprint that defines properties and functions.
@@ -25,23 +26,32 @@
 
 fun main() {
 
+    // Creating objects of Person class using Primary Constructor
     val person1 = Person(age = 23, name = "Peter", gender = "Male", occupation = "KDev")
     val person2 = Person(name = "Meera", age = 20, gender = "Female", occupation = "KYoutuber")
 
+    // Accessing properties
     println("name of person is ${person1.name}")
     println("name of person is ${person2.name}")
+
+    // Calling class methods
     person1.getAge()
     person2.getAge()
     person1.getGender()
     person2.getGender()
 
 
-    // Using Animal class
+    // ---------------------------------------------------------
+    // Animal class examples
+    // ---------------------------------------------------------
+
+
+    // Creating object using Primary Constructor
     //val animal = Animal() // Default Constructor
-    val animal = Animal("cow", 5, "Jersey", "Black") // Primary Constructor
+    val animal = Animal("cow", 5, "Jersey", "Black")
     println("animal is color ${animal.color}")
 
-
-    val animal2 = Animal(animalName = "cow", animalColor = "Red") // Primary Constructor
+    // Creating object using Secondary Constructor
+    val animal2 = Animal(animalName = "cow", animalColor = "Red")
     println("animal color is ${animal2.color}")
 }

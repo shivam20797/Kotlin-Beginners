@@ -1,8 +1,6 @@
-import java.time.Year
-
 /**
  * Topic: Inheritance in Kotlin
- * Author: Aakash
+ * Author: Shivam
  * Part of: Git Series for Kotlin Beginners
  *
  * Description:
@@ -28,12 +26,12 @@ import java.time.Year
 
 fun main(){
     var derived = Derived()
-    derived.name = "Peter"
-    derived.name2 = "Meera"
+    derived.name = "Base"
+    derived.name2 = "Derived"
     println(derived.name)
     println(derived.name2)
-    derived.method()
-    derived.method2()
+    derived.baseMethod()
+    derived.deriveMethod()
 
     val car = SimpleCar("Red")
     car.drive()
@@ -45,24 +43,25 @@ fun main(){
 
 open class Base{
     var name = "Base"
-    fun method(){
+    fun baseMethod(){
         println("I am $name class")
+    }
+}
+class Derived : Base(){
+    var name2 = "Derived"
+
+    fun deriveMethod(){
+        println("I am $name2 class")
     }
 }
 
 open class Dummy{
     var name = "Base"
-    fun method(){
+    fun dummyMethod(){
         println("I am $name class")
     }
 }
 
-class Derived: Base(){
-    var name2 = "Derived"
-    fun method2(){
-        println("I am $name2 class")
-    }
-}
 
 // ------------------------
 // Multilevel + Hierarchical Example
@@ -105,6 +104,7 @@ open  class Car(color: String) : Vehicle(color){
 }
 
 // note - always create parent object after that create child object
+// Parent class constructors are always called before child class constructors
 
 class SimpleCar(color: String) : Car(color){
     init {

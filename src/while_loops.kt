@@ -1,6 +1,6 @@
 /**
  * Topic: Loops in Kotlin
- * Author: Aakash
+ * Author: Shivam
  * Part of: Git Series for Kotlin Beginners
  *
  * Description:
@@ -19,12 +19,14 @@ fun main(){
     // Executes a block of code *while* the condition is true.
     // If the condition is false at the start, it won't run at all.
     var i = 1
+    var j = 5
+
     println("---- while loop (increasing i) ----")
     while (i<=5){
         println("i = $i")
         i++ // Increment to avoid infinite loop
     }
-    var j= 5
+
     println("---- while loop (decreasing j) ----")
     while (j>0){
         println("j = $j")

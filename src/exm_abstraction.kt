@@ -1,6 +1,6 @@
 /**
  * Topic: Abstraction in Kotlin (Abstract Class & Methods)
- * Author: Aakash
+ * Author: Shivam
  * Part of: Git Series for Kotlin Beginners
  *
  * Description:
@@ -69,7 +69,7 @@ interface Color{
 
 abstract class Shapes:Name,Color{
     // Abstract property (must be implemented in subclass)
-    abstract var i : Int
+    abstract var sides : Int
     // Abstract functions (no body, must be overridden)
     abstract fun draw()
 }
@@ -81,7 +81,7 @@ abstract class Shapes:Name,Color{
 
 
 class RectangleA:Shapes(){
-    override var i:Int = 10
+    override var sides:Int = 10
     override fun draw(){
         println("Rectangle drawn")
     }
@@ -95,7 +95,7 @@ class RectangleA:Shapes(){
 }
 
 class CircleA:Shapes(){
-    override var i:Int = 10
+    override var sides:Int = 10
     override fun draw(){
         println("Circle drawn")
     }
@@ -108,7 +108,7 @@ class CircleA:Shapes(){
 }
 
 class TriangleA:Shapes(){
-    override var i:Int = 10
+    override var sides:Int = 10
     override fun draw(){
         println("Triangle drawn")
     }
@@ -121,7 +121,7 @@ class TriangleA:Shapes(){
 }
 
 class SquareA:Shapes(){
-    override var i:Int = 10
+    override var sides:Int = 10
     override fun draw(){
         println("Square drawn")
     }

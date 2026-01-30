@@ -1,6 +1,6 @@
 /**
  * Topic: Arrays in Kotlin
- * Author: Aakash
+ * Author: Shivam
  * Part of: Git Series for Kotlin Beginners
  *
  * Description:
@@ -17,17 +17,29 @@ fun main(){
     // 1️⃣ Creating Arrays
     // --------------------------------------------------
 
-    val arr : Array<Int> = arrayOf(1,2,3,4)
-    val arr1  = arrayOf(1,2,3,4) // Type inferred automatically
-    var arr2  = arrayOf<String>("A","B","C")
+    val arr  = arrayOf(1,2,3,4) // Type inferred automatically
     println("---- Printing Arrays ----")
-    println(arr) // prints object reference
-    println(arr.toString()) // same as above
-    println(arr.joinToString()) // ✅ correct way to print array values
+    println(arr)                  // object reference
+    println(arr.joinToString())  //  readable output
+
+    val arr1 : Array<Int> = arrayOf(1,2,3,4)
+    println("---- Printing Arrays ----")
+    println(arr1)                  // object reference
+    println(arr1.joinToString())  //  readable output
+
+
+    val arr2  = arrayOf<String>("A","B","C")
+    println("---- Printing Arrays ----")
+    println(arr2)                      //object reference
+    println(arr2.toString())          // object reference
+    println(arr2.joinToString())     //  readable output
+    println(arr2.contentToString()) //   readable output
+
 
     // --------------------------------------------------
     // 2️⃣ Iterating through Arrays
     // --------------------------------------------------
+
     println("\n---- for-each loop ----")
     for (i in arr2){
         println("element is $i")
@@ -47,12 +59,13 @@ fun main(){
     // --------------------------------------------------
     // 3️⃣ Accessing and Modifying Elements
     // --------------------------------------------------
+
     println("\n---- Get and Set ----")
     println("arr2[2] element is ${arr2.get(2)}")
 
     arr2[1] = "D"
     arr2.set(2,"F")
-    println("arr2[2] element is ${arr2.get(2)}")
+    println("After modification: ${arr2[2]}")
 
     // --------------------------------------------------
     // 4️⃣ Empty and Null Arrays

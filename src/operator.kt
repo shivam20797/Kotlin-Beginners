@@ -1,7 +1,7 @@
 
 /**
  * Topic: Operators in Kotlin
- * Author: Aakash
+ * Author: Shivam
  * Part of: Git Series for Kotlin Beginners
  *
  * Description:
@@ -17,20 +17,21 @@
 
 fun main(){
 
-// ----------------------------------
+    // ----------------------------------
     // 1️⃣ Arithmetic Operators
     // ----------------------------------
 
 
-    val a = 5
-    val b = 10
-    println("Addition (a+b) = ${a+b}")
-    println("Subtraction (a-b) = ${a-b}")
-    println("Multiplication (a*b) = ${a*b}")
-    println("Division (a/b) = ${a.toFloat()/b}") // converted to Float for decimal output
-    println("Modulus (a%b) = ${a%b}")  // remainder
+    val a = 20
+    val b = 16
+    println("Addition (a + b) = ${a + b}")
+    println("Subtraction (a - b) = ${a - b}")
+    println("Multiplication (a * b) = ${a * b}")
+    println("Division (a / b) = ${a / b}") // integer division
+    println("Division (a / b) = ${a.toFloat() / b}") // converted to Float for decimal output
+    println("Modulus (a % b) = ${a % b}")  // remainder
 
-// ----------------------------------
+    // ----------------------------------
     // 2️⃣ Assignment Operators
     // ----------------------------------
 
@@ -51,7 +52,7 @@ fun main(){
     println("x*=10 = $x")
 
     x %= 20
-    println("x%=10 = $x")
+    println("x%=20 = $x")
 
     x /=10
     println("x/=10 = $x")
@@ -76,6 +77,7 @@ fun main(){
     var i = 10
     val j = 20
     val k = 30
+
     println("i>j && k>j : ${i>j && k>j}") // AND
     println("i>j || k>j : ${i>j || k>j}") // OR
     println("!(i>j) : ${!(i>j)}") // NOT
@@ -84,15 +86,12 @@ fun main(){
     // 5️⃣ Increment and Decrement Operators
     // ----------------------------------
 
-
-    println("\nPost-increment i++ → ${i++}")   // prints old value, then increments
+    println("Pre-increment ++i → ${++i}")      // increment first, then print
+    println("Post-increment i++ → ${i++}")     // print value, then increment
     println("After post-increment i = $i")
-
-    println("Pre-increment ++i → ${++i}")      // increments first, then prints
-
-    println("Post-decrement i-- → ${i--}")     // prints old value, then decrements
-    println("Pre-decrement --i → ${--i}")      // decrements first, then prints
-
+    println("Post-decrement --i → ${--i}")     // decrement first, then print
+    println("Pre-decrement i-- → ${i--}")      // print value, then decrement
+    println("After post-decrement i = $i")
 }
 
 /*

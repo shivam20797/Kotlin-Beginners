@@ -1,3 +1,6 @@
+/**
+ * Animal class demonstrates Primary and Secondary Constructors
+ */
 class Animal(var name: String, var age: Int, var breed: String, color: String) {
     var color: String = color
 
@@ -5,8 +8,7 @@ class Animal(var name: String, var age: Int, var breed: String, color: String) {
     // Secondary Constructor
     constructor(animalName: String, animalColor: String) : this(animalName, 1, "Jersey", animalColor)
 
-
-    // Init blocks run automatically
+    // init block runs when object is created. It will run automatically
     init {
         println("Name of the animal is $name")
     }
@@ -14,5 +16,9 @@ class Animal(var name: String, var age: Int, var breed: String, color: String) {
     init {
         println("Bread of the animal is $breed")
     }
+
+}
+
+class Demo public  constructor(var name:Int){
 
 }

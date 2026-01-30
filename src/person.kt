@@ -1,3 +1,7 @@
+/**
+ * Person class represents a real-world person
+ */
+
 class Person(var name:String,
              var age:Int,
              var gender:String,

@@ -1,6 +1,6 @@
 /**
  * Topic: If, Else, and Expression in Kotlin
- * Author: Aakash
+ * Author: Shivam
  * Part of: Git Series for Kotlin Beginners
  *
  * Description:
@@ -31,15 +31,19 @@ fun main(){
     // ----------------------------------
     // Kotlin does not have a ternary operator (? :)
     // Instead, `if` can be used as an expression that returns a value
+
     println("Greater value is: ${if (a > b) a else b}")
+
+
+    val c = if (a > b) a else b
+    println("c value is: $c")
 
     // ----------------------------------
     // 3️⃣ If-Else Ladder Example
     // ----------------------------------
 
-    var marks = 35
-
-    var grade = if (marks > 60) "First Division" else if(marks > 45) "Pass" else "Fail"
+    val marks = 35
+    val grade = if (marks > 60) "First Division" else if(marks > 45) "Pass" else "Fail"
 
     println("Grade: $grade")
 

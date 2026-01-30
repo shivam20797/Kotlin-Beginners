@@ -1,33 +1,35 @@
 /**
  * Topic: print(), println(), and main() function in Kotlin
- * Author: Aakash
+ * Author: Shivam
  * Part of: Git Series for Kotlin Beginners
  *
  * Description:
- * - Difference between print() and println()
- * - Simplified Kotlin main function (no need for 'public static void')
- * - Comparison with Java syntax
+ * - print() outputs text on the same line
+ * - println() outputs text and moves to the next line
+ * - Kotlin main() is simpler than Java's main()
  */
 
 
-fun main(args: Array<String>){
+fun main(){
 
     // print() → prints text on the same line
-
     print("Welcome to Kotlin")
 
     // println() → prints text and moves the cursor to the next line
-    println("Learning Kotlin Series")// after this line, next output appears on a new line
+    println("Learning Kotlin Series")
 
     // Example: multiple print statements
-    print("Check Print")  // stays on the same line
-    print(1+9)  // can print expressions too
-    print(false)  // can print boolean values as well
+    print("Check Print")
+    print(12+29)
+    print(false)
 }
 
 /*
 ----------------------------------------------------------
 🆚 Java Comparison
+
+// Java needs: public static void main()
+// Kotlin needs: fun main()
 
 In Java:
 --------------------

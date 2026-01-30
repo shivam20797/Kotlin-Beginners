@@ -1,6 +1,6 @@
 /**
  * Topic: when Expression in Kotlin
- * Author: Aakash
+ * Author: Shivam
  * Part of: Git Series for Kotlin Beginners
  *
  * Description:
@@ -40,7 +40,7 @@ fun main(){
     // ----------------------------------
 
     when(opr){
-        "add" ->{
+        "add" -> {
             val c = a+b
             println("Addition is $c")
         }
@@ -70,12 +70,26 @@ fun main(){
     // 4️⃣ Using when with Ranges and Conditions
     // ----------------------------------
 
-    val num = -1
-    when(num){
-        num%2 -> println("c is even")
-        in 1..9 -> println("c is one digit number")
-        !in 1..9 -> println("c is not in one digit number") // in
-        in 1 until 10 -> println("c is one digit number")
+    // Even / Odd check
+    when {
+        c % 2 == 0 -> println("c is even")
+        else -> println("c is odd")
+    }
+
+    // One-digit check
+    when(c) {
+        in 1..9 -> println("c is a one digit number")
+        else -> println("c is not a one-digit number")
+    }
+
+    when(c) {
+        !in 1..9 -> println("c is not a one digit number")
+        else -> println("c is a one-digit number")
+    }
+
+    when(c) {
+        in 1 until 10 -> println("c is a one digit number")
+        else -> println("c is not a one-digit number")
     }
 
 

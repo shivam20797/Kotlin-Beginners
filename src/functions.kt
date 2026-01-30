@@ -1,6 +1,6 @@
 /**
  * Topic: Functions in Kotlin
- * Author: Aakash
+ * Author: Shivam
  * Part of: Git Series for Kotlin Beginners
  *
  * Description:
@@ -24,52 +24,66 @@ fun main(){
     // Calling functions
     // --------------------------------------------------
 
+    var add = sum(a, b)
+
+    // Function reference (::functionName)
+    val sumRef = ::sum  // function reference
+
+    println("Addition is : $add")
     println(sum(a, b))
+    println(sum(a))  // Uses default b = 20
+    println(sum(a = a,b = b)) // Named arguments
+    println(sumRef(60,70)) // Using function reference
+
+
     println(sub(a, b))
     println(multi(a, b))
 
 
-    // Using default arguments
-    println(arithmeticOper(a, b))
+    println(arithmeticOper(a, b))   // default operation → returns 0
     println(arithmeticOper(a = a, b = b)) // Named arguments example
-
-    // Function reference (::functionName)
-    val sumFun = ::sum
-    println(sumFun(a,b))
 
 }
 
 /**
- * Function with return type Int and default argument
+ * Basic function with return type Int and default parameter
  */
 
 fun sum(a: Int, b: Int=20): Int {
     return a + b
 }
 
-fun sub(a: Int, b: Int): Int {
-    return a - b
-}
+/**
+ * Subtraction function
+ */
+
+
+fun sub(a: Int, b: Int): Int = a - b
 
 /**
  * Overloaded function (same name, different parameters)
  */
 
-fun sub(a: Int, b: Int,c: Int): Int {
-    return a - b
-}
+fun sub(a: Int, b: Int, c: Int): Int =  a - b
+
 
 /**
  * Expression body function
  * (for single-line logic, no need for return or curly braces)
  */
 
+
+/**
+ * Multiplication function using expression body
+ */
+
 fun multi(a: Int, b: Int) = a*b
 
 
 /**
- * Function using `when` expression
+ * Function using `when` expression for different operations
  */
+
 
 fun arithmeticOper(a: Int, b: Int,opr:String="nothing"): Int {
    return when(opr){
@@ -87,19 +101,10 @@ fun arithmeticOper(a: Int, b: Int,opr:String="nothing"): Int {
 // 🧠 Notes:
 // --------------------------------------------------
 // 1️⃣ Default return type is `Unit` (similar to `void` in Java).
-// 2️⃣ Functions can have default parameter values.
+// 2️⃣ Default parameter values allow skipping arguments.
 // 3️⃣ Named arguments let you specify which parameter you’re passing.
 // 4️⃣ You can store function references using `::functionName`.
-// 5️⃣ Function overloading works like Java.
-//
-// 🆚 Java Equivalent Example:
-//
-// public static int sum(int a, int b) {
-//     return a + b;
-// }
-//
-// In Kotlin:
-// fun sum(a: Int, b: Int): Int = a + b
-// --------------------------------------------------
+// 5️⃣ Function overloading works like in Java, but ensure all parameters are used.
+// 6️⃣ Expression body syntax makes single-line functions concise.
 
 

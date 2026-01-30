@@ -1,15 +1,17 @@
 /**
  * Topic: Getter and Setter in Kotlin
- * Author: Aakash
+ * Author: Shivam
  * Part of: Git Series for Kotlin Beginners
  *
  * Description:
- * This example demonstrates how to use custom getters and setters in Kotlin.
+ * This program explains how custom getters and setters work
+ * in Kotlin and how validation can be added using setters.
  *
- * Key Concepts Covered:
- *  - Getter: Used to retrieve a property’s value (you can customize how it returns data).
- *  - Setter: Used to set or modify a property’s value (you can add validation logic here).
- *  - The 'field' keyword: Refers to the backing field that stores the property’s actual data.
+ * Concepts Covered:
+ * 1. Default Getter and Setter
+ * 2. Custom Getter
+ * 3. Custom Setter with validation
+ * 4. Backing field (`field`)
  *
  * Notes:
  *  - 'lateinit' cannot be used with primitive types like Int, Double, Boolean.
@@ -17,6 +19,7 @@
  *  - Kotlin automatically creates default getters and setters for 'var' properties.
  *
  * Example Includes:
+ *
  *  - Voter class with:
  *      - Validation in setter (age cannot be less than 18)
  *      - Custom getter that adds message for name
@@ -24,38 +27,64 @@
  */
 
 fun main() {
+
+    // Creating object of Voter class
     val voter = Voter(18)
-    voter.ageToVote = 12 // trying to set invalid age
+
+    // Trying to set age
+    voter.ageToVote = 12
     println(voter.ageToVote)
-    println(voter.nameOfVoter) // calls custom getter
+
+    // Calling custom getter
+    println(voter.nameOfVoter)
+
+    // Default getter (val property)
     println(voter.nameOfVoter1)
 }
 
 
 class Voter(age: Int) {
-    var ageToVote: Int = age
+    /**
+     * Voter class demonstrates custom getter and setter
+     */
+
+    // lateinit cannot be used with primitive types like Int
+    // lateinit var ageToVote: Int ❌
+
+    /**
+     * var property → has both getter and setter
+     */
+
+    var ageToVote: Int  = age
 //        get() = field
 //        set(value) {
 //            field = value
 //        }
 
-    // default
-    // Custom Setter Example
+        // Custom Setter with validation
         set(value) {
-           if(value < 18) {
-               println("Age to vote can't be less than 18")
-           }
+            if(value < 18) {
+                println("Age to vote can't be less than 18")
+            }
             else{
                 field = value
             }
         }
-    // Custom Getter Example
-    var nameOfVoter: String = "Aakash"  // both getter + setter
+
+    /**
+     * Custom Getter Example
+     * Modifies the returned value
+     */
+
+    var nameOfVoter: String = "Shivam"
         get(){
             return "$field is eligible to vote"
         }
 
-    val nameOfVoter1: String = "Aakash" // only getter
+    /**
+     * val property → only getter (read-only)
+     */
+    val nameOfVoter1: String = "Shivam" // only getter
 
 
 }

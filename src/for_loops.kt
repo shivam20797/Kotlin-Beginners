@@ -1,7 +1,7 @@
 
 /**
  * Topic: For Loop in Kotlin
- * Author: Aakash
+ * Author: Shivam
  * Part of: Git Series for Kotlin Beginners
  *
  * Description:
@@ -32,7 +32,7 @@ fun main(){
     // --------------------------------------------------
     // 3️⃣ Until keyword (excludes upper limit)
     // --------------------------------------------------
-
+    println("---- for(k in 1 until 10) ----")
     for(k in 1 until 10){
         println("k = $k")
     }
@@ -40,7 +40,7 @@ fun main(){
     // --------------------------------------------------
     // 4️⃣ Reverse iteration (downTo)
     // --------------------------------------------------
-
+    println("---- for(k in 10 downTo 1) ----")
     for(k in 10 downTo  1){
         println("k = $k")
     }
@@ -50,8 +50,8 @@ fun main(){
     // 5️⃣ Multiplication Table Example
     // --------------------------------------------------
 
+    println("---- Table of 16 ----")
     var num = 16
-
     for(i in 1..10){
         println("$num*$i = ${num*i}")
     }
